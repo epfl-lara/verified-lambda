@@ -80,7 +80,7 @@ object Lambda {
       case IntegerValue(c2) => IntegerValue(op(c1, c2))
       case _ => Err("Plus given a non-integer value as second argument.")
     })
-    case Err(_) => Err("Plus given a non-integer value as first argument.")
+    case _ => Err("Plus given a non-integer value as first argument.")
   })
 
   def makeEnv(m: Map[String, Value]) = Environment(m.get(_))
